@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background-color: #f4f5f7; color: #111827; overflow-x: hidden; }
+
+/* Navbar */
+.navbar { background-color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
+.logo { font-size: 20px; font-weight: 800; color: #111827; display: flex; align-items: center; gap: 8px; letter-spacing: -0.5px; text-decoration: none; }
+.logo-icon { width: 24px; height: 24px; background-color: #673de6; border-radius: 4px; }
+.menu-btn { font-size: 26px; cursor: pointer; color: #111827; border: none; background: none; font-weight: bold; }
+
+/* Sidebar Mobile Menu */
+.sidebar { position: fixed; top: 0; left: -300px; width: 280px; height: 100vh; background: #fff; box-shadow: 2px 0 10px rgba(0,0,0,0.2); transition: 0.3s; z-index: 9999; padding: 20px; display: flex; flex-direction: column; }
+.sidebar.active { left: 0; }
+.sidebar-close { text-align: right; font-size: 32px; cursor: pointer; margin-bottom: 20px; color: #111827; line-height: 1; }
+.sidebar a { display: block; padding: 15px 0; color: #111827; text-decoration: none; font-weight: 600; border-bottom: 1px solid #f3f4f6; }
+.sidebar p { padding-bottom: 10px; color: gray; font-size: 14px; border-bottom: 1px solid #f3f4f6; margin-bottom: 10px; }
+
+/* Hero Section */
+.hero { background: linear-gradient(rgba(43,27,84,0.6), rgba(43,27,84,0.9)), url('https://assets.hostinger.com/images/hero-bg-2x-3c8c7c9a.png') no-repeat center/cover; padding: 80px 20px; text-align: center; color: white; }
+.hero h1 { font-size: 36px; line-height: 1.2; margin-bottom: 20px; font-weight: 800; }
+.hero p { margin-bottom: 30px; font-size: 16px; opacity: 0.9; }
+
+/* Search Box */
+.search-box { max-width: 100%; display: flex; background: #fff; padding: 6px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.search-box input { flex: 1; padding: 15px; border: none; outline: none; font-size: 16px; border-radius: 8px; width: 100%; }
+.search-box button { background-color: #673de6; color: white; border: none; width: 60px; border-radius: 6px; font-size: 20px; cursor: pointer; font-weight: bold; }
+
+/* General Containers */
+.container { padding: 20px; max-width: 100%; }
+.card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+/* Buttons */
+.btn-primary { background-color: #673de6; color: white; text-decoration: none; padding: 14px; border-radius: 8px; font-weight: 600; display: block; text-align: center; border: none; width: 100%; font-size: 16px; cursor: pointer; }
+.btn-primary:active { background-color: #5028c6; }
+
+/* Login Page UI */
+.google-btn { width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; background: white; border: 1px solid #d1d5db; padding: 12px; border-radius: 8px; font-size: 16px; font-weight: 600; color: #374151; cursor: pointer; margin-bottom: 20px; }
+.divider { text-align: center; margin: 20px 0; color: #6b7280; font-size: 14px; position: relative; }
+.divider::before, .divider::after { content: ""; position: absolute; top: 50%; width: 40%; height: 1px; background: #e5e7eb; }
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.input-field { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; outline: none; }
+.input-field:focus { border-color: #673de6; }
+
+/* Loader */
+.loader { border: 4px solid #f3f3f3; border-top: 4px solid #673de6; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; display: none; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; }
+th, td { border: 1px solid #e5e7eb; padding: 10px; text-align: left; }
+th { background: #f9fafb; }
